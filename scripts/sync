@@ -1,0 +1,9 @@
+#!bin/bash
+
+set -e
+
+sudo docker stop app && sudo docker rm app
+git pull
+
+sudo docker build -t app:latest .
+sudo docker run -d -p 80:3030 --name app app:latest
