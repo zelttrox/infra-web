@@ -2,6 +2,7 @@
 
 set -e
 
+cd ..
 sudo docker stop app && sudo docker rm app
 git pull
 
